@@ -1,26 +1,25 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
-# Todo-List-App
-Exceptional Todo List Application
+# React Calculator Application
+Fictional React Calculator Application
 
-This projects implements the use of JavaScript concepts about the use of webpack and ES6 features.
+This projects implements the use of React library to build a calculator.
 
-1. Todo List Application built entirely with JavaScript
-2. ES6 and Modules
-3. Object Oriented Programming Approach
-4. Webpack bundler
-5. date-fns
-
+1. Maths-Magician Application built entirely with React JS.
+2. ES6 and Modules.
+3. Object Oriented Programming Approach.
 
 ## Built With
 
 - HTML
+- Node.js
+- React
+- React-DOM
+- npm
 - CSS3
 - JavaScript/ES6
-- Webpack
-
 ## Live Demo
 
-[Live Demo Link](http://www.lekunzestanley.me/Todo-List-App/)
+[Live Demo Link](https://react-maths-magician.herokuapp.com/)
 
 
 ## Getting Started
@@ -33,11 +32,8 @@ To get a local copy  and to set it up and running follow these simple example st
 - Browser
 - Internet
 
-- Download the code from repository (https://github.com/happiguru/Todo-List-App).
-- Run `npm install` and `npm run dev` and the open the dist folder index.html file
-- Run `npm run test` to run all TDD tests
-- and double click the index.html file
-
+- Download the code from repository (https://github.com/happiguru/React-Calculator).
+- Run `npm install` and `npm start` and then open `http://localhost:3000/` on the browser to view it.
 
 ## Authors
 
