@@ -1,47 +1,69 @@
-import Operate from './operate';
+import operate from './operate';
 
-const Calculate = ((object, btnName) => {
-  let { total, next, operation } = object;
-  const operator = /[x,+,÷,-]/;
-  switch (btnName) {
-    case 'AC':
-      total = null;
-      next = null;
-      break;
-    case '+/-':
-      total *= -1;
-      next *= -1;
-      break;
-    case '%':
-      total = Operate(total, 100, '÷');
-      break;
-    case operator.includes(btnName):
-      if (operation && next) {
-        total = Operate(total, next, operation);
-      } else {
-        operation = btnName;
-      }
-      break;
-    case '.':
-      if (operation) {
-        next = next ? `${next}.` : '0.';
-      } else {
-        total = total ? `${total}.` : '0';
-      }
-      break;
-    case '=':
-      if (operation && next) {
-        total = Operate(total, next, operation);
-      }
-      break;
-    default:
-      if (operation && total) {
-        next = next ? next + btnName : btnName;
-      } else {
-        total = total ? total + btnName : btnName;
-      }
-      break;
+function calculate(data, buttonName) {
+  let { total, next, operation } = data;
+  let result;
+  const operator = ['+', '-', 'x', '÷', '%'];
+  const number = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.'];
+
+  if (buttonName === '=') {
+    result = {
+      total: operate(total, next, operation),
+      next: null,
+      operation: null,
+    };
   }
-});
 
-export default Calculate;
+  if (buttonName === '+/-') {
+    result = {
+      total: total * -1,
+      next: next * -1,
+      operation: null,
+    };
+  }
+
+  if (buttonName === 'AC') {
+    result = {
+      total: null,
+      next: null,
+      operation: null,
+    };
+  }
+
+  if (operator.includes(buttonName)) {
+    if (!next) {
+      result = {
+        total,
+        next,
+        operation: operation ? operation = buttonName.toString()
+          : operation = buttonName.toString(),
+      };
+    } else if (next) {
+      result = {
+        total: operate(total, next, operation),
+        next: null,
+        operation: operation ? operation = buttonName.toString()
+          : operation = buttonName.toString(),
+      };
+    }
+  }
+
+  if (number.includes(buttonName)) {
+    if (!operation) {
+      result = {
+        total: total ? total += buttonName.toString() : total = buttonName.toString(),
+        next,
+        operation,
+      };
+    } else if (operation) {
+      result = {
+        total,
+        next: next ? next += buttonName.toString() : next = buttonName.toString(),
+        operation,
+      };
+    }
+  }
+  return result;
+}
+
+export default calculate;

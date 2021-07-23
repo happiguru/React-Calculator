@@ -1,39 +1,47 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Button from './Button';
 
-function ButtonPanel() {
+function ButtonPanel({ clickHandler }) {
   return (
-    <div className="panel">
-      <div className="pair">
-        <Button value="+/-" />
-        <Button value="%" />
-        <Button value="÷" />
+    <>
+      <div className="panel">
+        <div className="pair">
+          <Button name="AC" handleClick={clickHandler} />
+          <Button name="+/-" handleClick={clickHandler} />
+          <Button name="%" handleClick={clickHandler} />
+          <Button name="÷" handleClick={clickHandler} />
+        </div>
+        <div className="pair2">
+          <Button name="7" handleClick={clickHandler} />
+          <Button name="8" handleClick={clickHandler} />
+          <Button name="9" handleClick={clickHandler} />
+          <Button name="x" handleClick={clickHandler} />
+        </div>
+        <div className="pair3">
+          <Button name="4" handleClick={clickHandler} />
+          <Button name="5" handleClick={clickHandler} />
+          <Button name="6" handleClick={clickHandler} />
+          <Button name="-" handleClick={clickHandler} />
+        </div>
+        <div className="pair4">
+          <Button name="1" handleClick={clickHandler} />
+          <Button name="2" handleClick={clickHandler} />
+          <Button name="3" handleClick={clickHandler} />
+          <Button name="+" handleClick={clickHandler} />
+        </div>
+        <div className="pair5">
+          <Button name="0" handleClick={clickHandler} />
+          <Button name="." handleClick={clickHandler} />
+          <Button name="=" handleClick={clickHandler} />
+        </div>
       </div>
-      <div className="pair2">
-        <Button value="8" />
-        <Button value="9" />
-        <Button value="7" />
-        <Button value="X" />
-      </div>
-      <div className="pair3">
-        <Button value="4" />
-        <Button value="5" />
-        <Button value="6" />
-        <Button value="-" />
-      </div>
-      <div className="pair4">
-        <Button value="1" />
-        <Button value="2" />
-        <Button value="3" />
-        <Button value="+" />
-      </div>
-      <div className="pair5">
-        <Button value="0" />
-        <Button value="." />
-        <Button value="=" />
-      </div>
-    </div>
+    </>
   );
 }
+
+ButtonPanel.propTypes = {
+  clickHandler: PropTypes.func.isRequired,
+};
 
 export default ButtonPanel;
