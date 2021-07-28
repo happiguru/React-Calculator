@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import Quote from './pages/quotes';
-import App from './components/App';
+import Quote from './pages/Quotes';
+import Calculator from './pages/Calculator';
 import Header from './components/Header';
 
 ReactDOM.render(
@@ -13,7 +13,7 @@ ReactDOM.render(
       <Header />
       <Switch>
         <Route exact path="/" component={Home} />
-        <Route exact path="/calculator" component={App} />
+        <Route exact path="/calculator" component={Calculator} />
         <Route exact path="/quotes" component={Quote} />
       </Switch>
     </React.StrictMode>
