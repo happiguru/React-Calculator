@@ -25,7 +25,7 @@ body {
 
 nav {
   display: flex;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 100%;
 }
 
@@ -88,9 +88,6 @@ nav > a {
 
 .panel .panel-btn:nth-child(17) {
   grid-column: span 2;
-}
-
-.panel .panel-btn:nth-child(17) {
   width: calc(36px + 20vw);
 }
 
