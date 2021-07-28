@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 const Button = ({ name, handleClick }) => (
 
   <button
+    className="panel-btn"
     type="button"
     onClick={() => { handleClick(name); }}
   >
