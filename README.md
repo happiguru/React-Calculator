@@ -35,6 +35,10 @@ To get a local copy  and to set it up and running follow these simple example st
 - Download the code from repository (https://github.com/happiguru/React-Calculator).
 - Run `npm install` and `npm start` and then open `http://localhost:3000/` on the browser to view it.
 
+### Testing
+
+- Run `npm test` to test the application.
+
 ## Authors
 
 👤 **Stanley Enow Lekunze**
