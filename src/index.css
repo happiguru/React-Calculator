@@ -16,12 +16,92 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family:
-    source-code-pro,
-    Menlo,
-    Monaco,
-    Consolas,
-    'Courier New',
-    monospace;
+#root {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+nav {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+h1 {
+  background-color: #ffebcd;
+  opacity: 0.9;
+  text-shadow: 1px 1px black;
+  color: #000;
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 5px;
+  width: max-content;
+  height: 30px;
+}
+
+nav > a {
+  text-decoration: none;
+}
+
+.display-panel {
+  width: calc(72px + 39vw);
+  height: calc(20px + 10vh);
+  font-size: calc(8px + 8vh);
+  background-color: #858693;
+  color: #fff;
+  text-align: right;
+  padding: 0 1vw 0.7vw 0;
+}
+
+.app {
+  align-self: center;
+  margin-bottom: 100px;
+}
+
+.panel {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.panel-btn {
+  background-color: #fff;
+  width: calc(18px + 10vw);
+  height: calc(10px + 13vh);
+  font-size: calc(12px + 1.5vw);
+  border: 0.5px solid black;
+}
+
+.panel .panel-btn:nth-child(4n),
+.panel .panel-btn:nth-child(19) {
+  background-color: #f97f11;
+  color: #fff;
+  width: calc(18px + 10vw);
+  height: calc(10px + 13vh);
+  font-size: calc(12px + 1.5vw);
+  border: 0.5px solid black;
+}
+
+.panel .panel-btn:nth-child(17) {
+  grid-column: span 2;
+  width: calc(36px + 20vw);
+}
+
+.displayText {
+  flex-direction: column;
+  padding: 2%;
+}
+
+.container {
+  display: flex;
+  background-color: #ffebcd;
+  opacity: 0.9;
+  text-shadow: 1px 1px black;
+  width: 80%;
+  margin-left: 9%;
+  margin-top: 2%;
 }

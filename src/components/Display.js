@@ -5,7 +5,7 @@ const Display = (props) => {
   const { result } = props;
   return (
     <>
-      <div>
+      <div className="display-panel">
         <h2>{result}</h2>
       </div>
     </>
